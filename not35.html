@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<style type="text/css">
+	#apDiv1 {
+	position: absolute;
+	width: 758px;
+	height: 115px;
+	z-index: 1;
+	left: 70px;
+	top: 65px;
+}
+    #apDiv2 {
+	position: absolute;
+	width: 332px;
+	height: 120px;
+	z-index: 2;
+	left: 289px;
+	top: 276px;
+}
+#apDiv2 ol li {
+	list-style-position: inside;
+	position: relative;
+}
+	#apDiv2 ol {
+		margin-top:0px;
+}
+    #apDiv3 {
+	position: absolute;
+	width: 717px;
+	height: 91px;
+	z-index: 3;
+	left: 90px;
+	top: 410px;
+}
+    #apDiv4 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 4;
+	left: 129px;
+	top: 512px;
+}
+    #apDiv5 {
+	position: absolute;
+	width: 719px;
+	height: 69px;
+	z-index: 5;
+	left: 94px;
+	top: 896px;
+}
+    #apDiv6 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 6;
+	left: 129px;
+	top: 977px;
+}
+    #apDiv7 {
+	position: absolute;
+	width: 704px;
+	height: 105px;
+	z-index: 7;
+	left: 98px;
+	top: 1367px;
+}
+    #apDiv8 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 8;
+	left: 129px;
+	top: 1481px;
+}
+    #apDiv9 {
+	position: absolute;
+	width: 528px;
+	height: 115px;
+	z-index: 9;
+	left: 189px;
+	top: 1864px;
+}
+#apDiv9 ol li {
+	list-style-position: inside;
+	position: relative;
+}
+	#apDiv9 ol {
+		margin-top:0px;
+}
+    #apDiv10 {
+	position: absolute;
+	width: 739px;
+	height: 115px;
+	z-index: 10;
+	left: 86px;
+	top: 2207px;
+}
+    #apDiv11 {
+	position: absolute;
+	width: 738px;
+	height: 111px;
+	z-index: 11;
+	left: 76px;
+	top: 2376px;
+}
+    #apDiv12 {
+	position: absolute;
+	width: 732px;
+	height: 95px;
+	z-index: 12;
+	left: 82px;
+	top: 2519px;
+}
+    #apDiv13 {
+	position: absolute;
+	width: 288px;
+	height: 94px;
+	z-index: 13;
+	top: 2633px;
+	left: 91px;
+}
+    #apDiv14 {
+	position: absolute;
+	width: 461px;
+	height: 213px;
+	z-index: 14;
+	left: 395px;
+	top: 2632px;
+}
+    </style>
+	</head>
+	<body BackGround="f22.png">
+	<link href="base.css" rel="stylesheet" type="text/css">
+	<span style="font-family: calibri; color: white; font-size=130%;font-size: 125%;">
+	<ptit>Crearea unui Heap</ptit>
+	<div id="apDiv1">
+	 <tab2>Dupa cum am observat, putem creea un heap prin apeluri succesive ale procedurii <b>Insereaza</b>(H, cheie); daca am insera n elemente, atunci complexitatea ar ajunge la O(nlog<sub>2</sub>n). O strategie mai eficienta de constructie a unui heap se bazeaza pe ideea de echilibrare. Apelul functiei <b>Insereaza</b>(H, cheie) poate fi interpretat ca o combinare de doua heap-uri: un heap cu n elemente si un heap format doar din elementul cheie.
+		Putem construi heap-ul cu radacina H[i] combinand la fiecare pas i, doua heap-uri  de dimensiuni apropiate: heap-ul de radacina 2i si heap-ul cu radacina 2i+1 si cu elementul H[i] asa cum se intampla in procedura <b>CreareHeap</b>(n):
+    </div>
+	<div id="apDiv2">
+  <b>CreareHeap</b>(H)
+	  <ol>
+	    <li><strong>pentru</strong> i <sp1>&#8592</sp1> [n/2],1,-1 <strong>executa</strong></li>
+	    <li><tabal><b>CombHeap</b>(H,i)</li>
+      </ol>
+    </div>
+	<div id="apDiv3">
+    <tab2>Functia <b>CombHeap</b>(H,i) combina elementul H[i] cu heapurile de radacina 2i si 2i+1. Sa analizam combinarea heap-urilor (din figura) cu radacina in nodul 2, respectiv 3 cu nodul de pe pozitia 1. (avand valoarea 12):
+    </div>
+	<div id="apDiv5">
+    <tab2>Valoarea din nodul 1 (12) va fi comparta cu cel mai mic dintre fii(nodul 2, valoarea 2). Deoarece 2<12, pentru a indeplini conditia de heap, valorile nodurilor 1 si 2 vor fi schimbate:
+    </div>
+	<div id="apDiv7">
+  <tab2>Valoarea 7 va fi "retrogradata" in arbore; este acum plasata in nodul 3 si urmeaza sa fie comparata cu cel mai mic dintre fiii nodului 3(nodul 6 avand valoarea 3). Conditia de <i>min-heap</i> nu este indeplinita, prin urmare, valoarea nodului 3 va fi interschimbata cu valoara nodului 6:
+    </div>
+	<div id="apDiv9">
+    <b>CombHeap</b>(H,i)
+	<ol>
+		<li><sp1>v</sp1> <sp1>&#8592</sp1> H[i]</li>
+		<li>i <sp1>&#8592</sp1> 2i</li>
+		<li><strong>cat timp</strong> i &#8804 dimensiune-heap[H] <strong>executa</strong></li>
+		<li><tabal><strong>daca</strong> i < dimensiune-heap[H] <strong>atunci</strong></li>
+		<li><tabal><tabal><strong>daca</strong> H[i] > H[i+1] <strong>atunci</strong></li>
+		<li><tabal><tabal><tabal>i <sp1>&#8592</sp1> i + 1</li>
+		<li><tabal>daca</strong> <sp1>v</sp1> < H[i] <strong>atunci</strong></li>
+		<li><tabal><tabal>H[Tata(i)] <sp1>&#8592</sp1> H[i]</li>
+		<li><tabal><tabal>i <sp1>&#8592</sp1> 2i</li>
+		<li><tabal><strong>altfel</strong></li>
+		<li><tabal><tabal>i <sp1>&#8592</sp1> i + 1</li>
+		<li>H[Tata(i)] <sp1>&#8592</sp1> <sp1>v</sp1></li>
+	</ol>
+    </div>
+	<div id="apDiv10">
+    <tab2><i>Complexitatea algoritmului</i><br/>
+	<tab2>Notam cu h = [log<sub>2</sub>n] inaltimea heap-ului. Pentru fiecare nod x de pe nivelul i, 
+	i &#8712 {2, 3, 4, ..., h-1}, pentru a construi heapul cu radacina x se fac cel mult h-i coborari ale valorii H[x] 
+	in arbore.
+	<br/><tab2>Prin urmare, in cazul cel mai defavorabil, numarul de operatii elementare de efectuate de algoritm pentru 
+	a construi un heap cu n elemente este:
+	</div>
+	<div id="apDiv12">
+    <tab2>Astfel algoritmul de constructie a unui heap a devenit liniar. Mai ramane sa definim 2 proceduri prezentate in algoritmii de pe paginile anterioare: <b>Minim</b>(H), respectiv <b>Extrage-Min</b>(H).
+    </div>
+	<div id="apDiv13">
+	<b>Minim</b>(H)
+	<ol>
+		<li><strong>returneaza</strong> H[1]</li>
+	</ol>
+	</div>
+	<div id="apDiv14">
+	<b>Extrage-Min</b>(H)
+	<ol>
+		<li><sp1>v</sp1> <sp1>&#8592</sp1> H[1]</li>
+		<li>H[1] <sp1>&#8592</sp1> H[dimensiune-heap[H]]</li>
+		<li>dimensiune-heap[H] <sp1>&#8592</sp1> dimensiune-heap[H] - 1</li>
+		<li><b>CombHeap</b>(H,1)</li>
+		<li><strong>returneaza</strong> v</li>
+	</ol>
+	</div>
+	</span>
+    <div id="apDiv4"><img src="schiat351.png" width="602" height="365"></div>
+    <div id="apDiv6"><img src="schiat352.png" width="602" height="365"></div>
+    <div id="apDiv8"><img src="schiat353.png" width="602" height="365"></div>
+    <div id="apDiv11"><img src="sum3.png" width="724" height="87"></div>
+</body>
+	<div id="menup">
+	<ul>
+	<li><a href="not34.html" target="desk">Previous</a></li>
+	</ul>
+	</div>
+</html>

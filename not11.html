@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<style type="text/css">
+	#apDiv1 {
+	position: absolute;
+	width: 760px;
+	height: 115px;
+	z-index: 1;
+	left: 67px;
+	top: 54px;
+}
+    #apDiv2 {
+	position: absolute;
+	width: 259px;
+	height: 497px;
+	z-index: 2;
+	left: 95px;
+	top: 193px;
+}
+    #apDiv3 {
+	position: absolute;
+	width: 200px;
+	height: 333px;
+	z-index: 2;
+	left: 202px;
+	top: 260px;
+}
+    #apDiv4 {
+	position: absolute;
+	width: 699px;
+	height: 97px;
+	z-index: 3;
+	left: 67px;
+	top: 170px;
+}
+#apDiv4 ul
+{
+		margin-top:0px;
+}
+    #apDiv5 {
+	position: absolute;
+	width: 699px;
+	height: 150px;
+	z-index: 4;
+	left: 94px;
+	top: 593px;
+}
+#apDiv5 ul
+{
+		margin-top:0px;
+		list-style-image:url('white-arrow-md4.png');
+}
+    #apDiv6 {
+	position: absolute;
+	width: 701px;
+	height: 164px;
+	z-index: 5;
+	left: 94px;
+	top: 728px;
+}
+#apDiv6 ul
+{
+		margin-top:0px;
+}
+    #apDiv7 {
+	position: absolute;
+	width: 704px;
+	height: 126px;
+	z-index: 6;
+	left: 101px;
+	top: 884px;
+}
+#apDiv7 ol {
+		margin-top:0px;
+}
+    </style>
+	</head>
+<body BackGround="f22.png">
+	<link href="base.css" rel="stylesheet" type="text/css">
+	<span style="font-family:calibri; color:white; font-size:125%;">
+		<ptit>Gradul unui varf/nod</ptit>
+    <div id="apDiv1">
+    <tab2><strong>Gradul exterior</strong> al unui varf <sp1>u</sp1>, notat d<sup>+</sup>(<sp1>u</sp1>), reprezinta numarul arcelor care ies din nodul <sp1>u</sp1>, adica numarul arcelor de forma (<sp1>u</sp1>,<sp1>v</sp1>) &#8712 <sp1>E</sp1>.<br/>
+	<tab2>Analog, se defineste <strong>gradul interior</strong> al unui varf <sp1>u</sp1>, notat d<sup>-</sup>(<sp1>u</sp1>), ca fiind numarul arcelor care intra in nodul <sp1>u</sp1> ( de forma (<sp1>v</sp1>,<sp1>u</sp1>) &#8712 <sp1>E</sp1> ).
+    </div>
+	</span>
+	<div id="menup">
+	<ul>
+	      <li><a href="not1.html" target="desk">Previous</a></li>
+      </ul>
+    </div>
+     </div>
+	<div id="menun">
+	<ul>
+	      <li><a href="not12.html" target="desk">Next</a></li>
+      </ul>
+    </div>
+	<span style="font-family:calibri; color:white; font-size:125%;">
+    <div id="apDiv3"><img src="schita2.png" width="464" height="332"></div>
+    <div id="apDiv4">
+     De exemplu, in graful din figura pentru nodul <sp1>v</sp1> = 4 avem:
+	 <ul type="circle">
+	 <li>d<sup>+</sup>(4)=1 <sp1>&#8594 </sp1> din nodul 4 iese un singur arc, in speta arcul (4, 5) </li>
+	 <li>d<sup>-</sup>(4)=3 <sp1>&#8594 </sp1> exista trei arce care intra in nodul 4 si anume (1, 4), (2, 4), (3, 4).</li>
+	 </ul>
+    </div>
+    <div id="apDiv5">
+	Se mai definesc urmatoarele multimi:
+    <ul>
+    <li> <sp1>&#915 </sp1><sup>+</sup>(<sp1>u</sp1>) = { <sp1>v</sp1> &#8712 <sp1> V </sp1> | (<sp1>u</sp1>,<sp1>v</sp1>) &#8712 <sp1> E </sp1> } <sp1>&#8594 </sp1> multimea nodurilor ce constituie extremitati finale ale arcelor care pleaca din nodul <sp1>u</sp1>. Pe scurt, multimea <strong>succesorilor</strong> lui <sp1>u</sp1>;</li>
+    <li> <sp1>&#915 </sp1><sup>-</sup>(<sp1>u</sp1>)  = { <sp1>v</sp1> &#8712 <sp1> V </sp1> | (<sp1>v</sp1>,<sp1>u</sp1>) &#8712 <sp1> E </sp1> } <sp1>&#8594 </sp1> multimea nodurilor ce constituie extremitati initiale ale arcelor care intra in nodul <sp1>u</sp1>. Pe scurt, multimea <strong>predecesorilor</strong> lui <sp1>u</sp1>. </li>
+    </ul>
+    </div>
+    <div id="apDiv6">
+    De exemplu, in graful din figura pentru nodul <sp1>v</sp1> = 4 avem:
+    <ul type="circle">
+    <li><sp1>&#915 </sp1><sup>+</sup>(4) = {5} <sp1>&#8594 </sp1> din nodul 4 pleaca doar arcul (4, 5), deci singurul predecesor al lui 4 este 5; </li>
+	<li><sp1>&#915 </sp1><sup>-</sup>(4) = {1, 2, 3} <sp1>&#8594 </sp1> ca urmare a faptului ca arcele care ajung in nodul 4 sunt (1, 4), (2, 4) si (3, 4), putem spune ca multimea succesorilor nodului 4 este {1, 2, 3}. </li>
+    </ul>
+    </div>
+	<div id="apDiv7">
+    <tab2>In cadrul unui graf neorientat, gradul unui nod <sp1>u</sp1>, notat d(<sp1>u</sp1>), reprezinta numarul muchiilor incidente nodului <sp1>u</sp1>.<br/>
+    <tab2>Un nod care are gradul 0 se numeste nod izolat, iar unul care are graful 1, nod terminal. Analog, un varf <sp1>u</sp1> cu d<sup>+</sup>(<sp1>u</sp1>)=d<sup>-</sup>(<sp1>u</sp1>)=0 se numeste varf izolat, iar unul v cu <br/>d<sup>+</sup>(<sp1>v</sp1>)=d<sup>-</sup>(<sp1>v</sp1>)=1 se numeste varf terminal.<br/><strong>Teorema</strong>
+    <ol>
+    <li>Suma gradelor interoare ale unui graf orientat, care este egala cu suma gradelor exterioare, este egala cu numarul de arce din graf, mai exact cu cardinalul multimii <sp1>E</sp1>.</li>
+    <li>Suma gradelor interoare ale unui graf neorientat este egala cu dublul numarul de muchii din graf, mai exact cu cardinalul multimii <sp1>E</sp1>.</li>
+    </ol>
+    </div>
+</span>
+</body>
+</html>

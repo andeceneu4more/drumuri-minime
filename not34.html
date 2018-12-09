@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<style type="text/css">
+	#apDiv1 {
+	position: absolute;
+	width: 742px;
+	height: 52px;
+	z-index: 1;
+	left: 76px;
+	top: 58px;
+}
+    #apDiv2 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 2;
+	left: 547px;
+	top: 241px;
+}
+    #apDiv3 {
+	position: absolute;
+	width: 441px;
+	height: 301px;
+	z-index: 3;
+	left: 217px;
+	top: 150px;
+}
+#apDiv3 ol li {
+	list-style-position: inside;
+	position: relative;
+}
+	#apDiv3 ol {
+		margin-top:0px;
+}
+    #apDiv4 {
+	position: absolute;
+	width: 705px;
+	height: 115px;
+	z-index: 4;
+	left: 104px;
+	top: 689px;
+}
+    #apDiv5 {
+	position: absolute;
+	width: 841px;
+	height: 43px;
+	z-index: 5;
+	left: -155px;
+	top: 955px;
+}
+    #apDiv6 {
+	position: absolute;
+	width: 704px;
+	height: 346px;
+	z-index: 6;
+	left: 103px;
+	top: 1010px;
+}
+    #apDiv7 {
+	position: absolute;
+	width: 308px;
+	height: 68px;
+	z-index: 7;
+	left: 270px;
+	top: 1356px;
+}
+#apDiv7 ol li {
+	list-style-position: inside;
+	position: relative;
+}
+	#apDiv7 ol {
+		margin-top:0px;
+}
+    #apDiv8 {
+	position: absolute;
+	width: 710px;
+	height: 115px;
+	z-index: 8;
+	left: 103px;
+	top: 1428px;
+}
+    #apDiv9 {
+	position: absolute;
+	width: 619px;
+	height: 377px;
+	z-index: 9;
+	left: 129px;
+	top: 1611px;
+}
+    #apDiv10 {
+	position: absolute;
+	width: 700px;
+	height: 44px;
+	z-index: 10;
+	left: -126px;
+	top: 2004px;
+}
+    #apDiv11 {
+	position: absolute;
+	width: 743px;
+	height: 116px;
+	z-index: 11;
+	left: 70px;
+	top: 2067px;
+}
+    #apDiv12 {
+	position: absolute;
+	width: 754px;
+	height: 353px;
+	z-index: 12;
+	left: 129px;
+	top: 2189px;
+}
+    #apDiv13 {
+	position: absolute;
+	width: 772px;
+	height: 47px;
+	z-index: 13;
+	left: 70px;
+	top: 2572px;
+}
+    #apDiv14 {
+	position: absolute;
+	width: 650px;
+	height: 115px;
+	z-index: 14;
+	left: 129px;
+	top: 2635px;
+}
+    #apDiv15 {
+	position: absolute;
+	width: 712px;
+	height: 84px;
+	z-index: 15;
+	left: 70px;
+	top: 3030px;
+}
+    #apDiv16 {
+	position: absolute;
+	width: 700px;
+	height: 65px;
+	z-index: 16;
+	left: 70px;
+	top: 3502px;
+}
+    #apDiv17 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 17;
+	left: 129px;
+	top: 3127px;
+}
+    #apDiv18 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 18;
+	left: 129px;
+	top: 3573px;
+}
+    #apDiv19 {
+	position: absolute;
+	width: 710px;
+	height: 54px;
+	z-index: 19;
+	left: 70px;
+	top: 3950px;
+}
+    #apDiv20 {
+	position: absolute;
+	width: 442px;
+	height: 163px;
+	z-index: 19;
+	left: 147px;
+	top: 4016px;
+}
+#apDiv20 ol li {
+	list-style-position: inside;
+	position: relative;
+}
+	#apDiv20 ol {
+		margin-top:0px;
+}
+    #apDiv21 {
+	position: absolute;
+	width: 734px;
+	height: 115px;
+	z-index: 20;
+	left: 71px;
+	top: 4232px;
+}
+    </style>
+	</head>
+	<body BackGround="f22.png">
+	<link href="base.css" rel="stylesheet" type="text/css">
+	<span style="font-family: calibri; color: white; font-size=130%;font-size: 125%;">
+	<div id="apDiv1">
+    <tab2>Acesta poate fi optimizat prin intermediul utilizarii unei cozi de prioritati <sp1>Q</sp1>, a unui tablou unidimensional N care contorizeaza pentru orice varf <sp1>v</sp1> &#8712 <sp1>V</sp1> de cate ori a fost introdus in <sp1>Q</sp1> si a unei variabile booleane <sp1>C</sp1>. </div>
+	<div id="apDiv3">
+    <b>Bellman-Ford2</b>(<sp1>G</sp1>, <sp1>s</sp1>)
+    <ol>
+    <li><sp1>C &#8592</sp1> ADEVARAT</li>
+    <li>Initializeaza-Sursa-Unica(<sp1>G, s</sp1>)</li>
+    <li><sp1>Q &#8592; </sp1>{<sp1>s</sp1>}</li>
+    <li><strong>pentru</strong> fiecare varf <sp1>v</sp1> &#8712 <sp1>V</sp1> <strong>executa</strong></li>
+    <li><tabal>N[<sp1>v</sp1>]<sp1> &#8592; </sp1> 0</li>
+    <li>N[<sp1>s</sp1>]<sp1> &#8592; </sp1>1</li>
+    <li><strong>cat timp</strong> <sp1>Q</sp1> &#8800; &#8709; si <sp1>C</sp1> = ADEVARAT <strong>executa</strong></li>
+    <li><tabal><sp1>u &#8592; </sp1>Extrage-Min(<sp1>Q</sp1>)</li>
+    <li><tabal><strong>pentru</strong> fiecare varf <sp1>v</sp1> &#8712 <sp1>&#915 </sp1><sup>+</sup>(<sp1>u</sp1>) <strong>executa</strong></li>
+    <li><tabal><tabal><strong>daca</strong> d[<sp1>v</sp1>] &#8804 d[<sp1>u</sp1>] + <sp1>&#969</sp1>(<sp1>u</sp1>,<sp1>v</sp1>) <strong>atunci</strong></li>
+    <li><tabal><tabal><tabal>d[<sp1>v</sp1>] <sp1>&#8592</sp1> d[<sp1>u</sp1>] + <sp1>&#969</sp1>(<sp1>u</sp1>,<sp1>v</sp1>)</li>
+    <li><tabal><tabal><tabal>&#960;[<sp1>v</sp1>] <sp1>&#8592;</sp1> <sp1>u</sp1></li>
+    <li><tabal><tabal><tabal><strong>daca</strong> <sp1>v</sp1> &#8713; <sp1>Q</sp1> <strong>atunci</strong></li>
+    <li><tabal><tabal><tabal><tabal><strong>daca</strong> N[<sp1>v</sp1>] &gt n <strong>atunci</strong></li>
+    <li><tabal><tabal><tabal><tabal><tabal><sp1>C &#8592</sp1> FALS</li>
+    <li><tabal><tabal><tabal><tabal><strong>altfel</strong></li>
+    <li><tabal><tabal><tabal><tabal><tabal>N[<sp1>v</sp1>]<sp1> &#8592; </sp1> N[<sp1>v</sp1>] + 1</li>
+    <li><tabal><tabal><tabal><tabal><tabal><sp1>Q &#8592; Q</sp1> &#8746 {<sp1>v</sp1>}</li>
+    <li><strong>returneaza</strong> <sp1>C</sp1></li>
+    </ol>
+    </div>
+    <div id="apDiv4"><tab2>Liniile 1-6 realizeaza initializarea valorilor din d, N, &#960, <sp1>Q</sp1> si <sp1>C</sp1>. La fiecare iteratie a instructiunii <strong>cat timp</strong> din liniile 7-18, este extras cate un varf <sp1>u</sp1> din <sp1>Q</sp1> apoi liniile 9-12 relaxeaza arcele (<sp1>u</sp1>,<sp1>v</sp1>) care ies din <sp1>u</sp1> apoi reactualizeaza d[<sp1>v</sp1>] si predecesoul &#960[<sp1>u</sp1>] in cazul i care drmul minim catre <sp1>v</sp1> poate fi ameliorat prin trecerea prin <sp1>u</sp1>. In continuare daca nodul <sp1>v</sp1> nu se afla deja in coada <sp1>Q</sp1>, se mai verifica a cata oara a fost introdus in coada. Daca graful contine un circuit de cost negativ accesibil din <sp1>s</sp1>, atunci fiecare nod din <sp1>v</sp1> &#8712 <sp1>V</sp1> se va actualiza la nesfarsit. De aceea, instructiunea de pe linia 14, se asigura ca <sp1>v</sp1> a fost introdus in <sp1>Q</sp1> de mai putin de n ori; daca a fost introdus de mai mult de n ori <sp1>C</sp1> va deveni FALS iar istructiunea <strong>cat timp</strong> se va opri. In caz contrar, arcul (<sp1>u</sp1>,<sp1>v</sp1>) va fi relaxat si instructiunea <strong>cat timp</strong> va continua.
+    </div>
+    <div id="apDiv5">
+    <ptit>Algoritmi pentru cozi de prioritate</ptit>
+    </div>
+    <div id="apDiv6">
+	<tab2>O coada de prioritati poate fi reprezentata printr-un <strong>heap</strong>. Un heap este un arbore binar, care are in cadrul fiecarui nod o valoare memorata numita <strong>cheie</strong> si are anumite proprietati.<br/><tab2>Un <i>max-heap</i> este un arbore binar complet, in care valoarea memorata in orice nod al sau este mai mare sau egala cu valorile memorate in fiii sai.<br/>
+	<tab2>Analog, un <i>min-heap</i> este un arbore binar complet, in care valoarea memorata in orice nod al sau este mai mica sau egala cu valorile memorate in fiii sai.<br/>
+	<tab2>In ceea ce urmeaza, un <i>min-heap</i> va fi numit heap, urmand ca atunci cand este vorba despre un <i>max-heap</i>, acesta sa se precizeze in mod explicit.<br/>
+	<tab2>Fiind un arbore binar complet, reprezentarea cea mai adecvata a unui heap este <strong>reprezentarea secventiala</strong>. Daca heap-ul are n noduri numerotate de la 1 la n, va fi suficient sa retinem informatile asociate nodurilor intr-un tablou unidimensional cu n elemente, unde pentru orice nod de pe pozitia i, fiii sai se vor afla pe pozitiile 2i si 2i+1. Astfel putem defini procedura:
+    </div>
+    <div id="apDiv7">
+    <b>Tata</b>(i)
+	<ol>
+		<li><strong>returneaza</strong> [i/2]</li>
+	</ol>
+    </div>
+    <div id="apDiv8">
+    <tab2>Unde [x] reprezinta partea intreaga a numarului x. Utilizand reprezentarea secventiala, putem reformula definitia unui heap astfel:<br/><br/>
+	<tab2>Tabloul H formeaza un <i>max-heap</i> daca H[i] &#8804 H[Tata(i)], &#8704 i &#8712 {2, 3, 4, ..., n}.<br/>
+	<tab2>Tabloul H formeaza un <i>min-heap</i> daca H[i] &#8805 H[Tata(i)], &#8704 i &#8712 {2, 3, 4, ..., n}.<br/>
+	<tab2>Spre exemplu, in figura de mai jos este un <i>min-heap</i> reprezentat secvential si arborescent.
+    </div>
+    <div id="apDiv10">
+    <ptit>Inserarea intr-un heap</ptit>
+    </div>
+    <div id="apDiv11">
+    <tab2>Fie H un heap cu n elemente si x o valoare ce trebuie inserata. Valoarea x va fi memorata in heap pe pozitia n+1, apoi se va restaura heap-ul, "promovand" valoarea x spre radacina, pana cand proprietatea de heap este restabilita. Spre exemplu, pentru heap-ul din figura, vom insera valoarea 2.
+    </div>
+    <div id="apDiv13">
+    <tab2>Valoarea va ocupa pozitia 6.
+    </div>
+    <div id="apDiv15">
+	<tab2>Acest arbore binar, nu este un heap. Vom compara valoarea nodului 6 cu valoarea nodului sau parinte (nodul 3). Pentru a conserva proprietatea de heap, trebuie sa intreschimbam valorile celor 2 noduri.
+    </div>
+    <div id="apDiv16">
+    <tab2>Din nou, valoarea 2 va fi comparata cu valoarea din nodul sau tata(nodul 1) si deoarece nu respecta conditia de <i>min-heap</i>, va fi interschimbata.
+    </div>
+    <div id="apDiv19">
+    <tab2> Valoarea 2 a fost promovata pana in radacina, valorile de pe drumul parcurs spre radacina fiind <i>retrogradate</i> succesiv, cu un nivel. Proprietatea de heap a fost restabilita.
+	</div>
+    <div id="apDiv20">
+    <b>Insereaza</b>(H, cheie)
+	<ol>
+	<li>dimensiune-heap[H] <sp1>&#8592</sp1> dimensiune-heap[H] + 1</li>
+		<li>i <sp1>&#8592</sp1> dimensiune-heap[H]</li>
+		<li><strong>cat timp</strong> i > 1 si H[Tata(i)] > cheie <strong>executa</strong></li>
+		<li><tabal>H[i] <sp1>&#8592</sp1> H[Tata(i)]</li>
+		<li><tabal>i <sp1>&#8592</sp1> Tata(i)</li>
+		<li>H[i] <sp1>&#8592</sp1> cheie</li>
+	</ol>
+    </div>
+    <div id="apDiv21">
+    <tab2>Analizand <strong>complexitatea</strong> procedurii de inserare, deducem ca in cazul cel mai defavorabi, valoarea nou inserata urca pana in radacina arborelui, deci necista h operatii unde h este inaltimea heap-ului. Fiind un arbore binar complet, inaltimea heap-ului va fi [log<sub>2</sub>n], deci inserarea unui nod intr-un heap cu n elemente, are complexitatea de timp O(log<sub>2</sub>n).
+    </div>
+</span>
+    <div id="apDiv17"><img src="schiat343.png" width="602" height="365"></div>
+    <div id="apDiv18"><img src="schiat344.png" width="602" height="365"></div>
+<div id="apDiv12"><img src="schiat341.png" width="602" height="365">
+    </div>
+    <div id="apDiv14"><img src="schiat342.png" width="602" height="365"></div>
+<div id="apDiv9"><img src="schiat353.png" width="602" height="365">
+    </div>
+	<div id="menup">
+	<ul>
+	<li><a href="not33.html" target="desk">Previous</a></li>
+	</ul>
+	</div>
+	<div id="menun">
+	<ul>
+	<li><a href="not35.html" target="desk">Next</a></li>
+	</ul>
+	</div>
+	</body>
+</html>

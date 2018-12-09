@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<style type="text/css">
+	#apDiv1 {
+	position: absolute;
+	width: 735px;
+	height: 1162px;
+	z-index: 2;
+	left: 90px;
+	top: 36px;
+}
+   #apDiv2 {
+	position: absolute;
+	width: 711px;
+	height: 115px;
+	z-index: 1;
+	left: 3px;
+	top: 1115px;
+}
+    #apDiv4 {
+	position: absolute;
+	width: 734px;
+	height: 207px;
+	z-index: 3;
+	left: -26px;
+	top: 919px;
+}
+    </style>
+	</head>
+	<body BackGround="f22.png">
+	<link href="base.css" rel="stylesheet" type="text/css">
+	<span style="font-family:calibri; color:white; font-size:125%">
+	<ptit> Exercitii propuse </ptit>
+	</span>
+	<div id="apDiv1">
+	<span style="font-family:calibri; color:white; font-size:125%">
+				<prob> 2.Dragoni(OJI 2015) </prob> <br/>
+			   <tab2>Suparati ca lansarea partii a treia a filmului lor preferat s-a amanat pana in iunie 2018, Henry si Hetty s-au gandit la propriul scenariu pentru finalul trilogiei:<br/>Intr-o lume in care vikingii pot zbura cu dragonii exista n insule. Hiccup, seful tribului de vikingi aflat pe insula 1, stie m rute directe de zbor <strong>bidirectionale</strong> intre insule. Pentru fiecare j intre 1 si m, ruta j uneste insulele A<sub>j</sub> si B<sub>j</sub> si are lungime D<sub>j</sub>.<br/>
+				<tab2>Pe fiecare insula i, (1 &#8804 i &#8804 n) exista dragoni din specia i care pot zbura fara a se opri pentru odihna o distanta maxima Dmaxi. Cu alte cuvinte, dragonii de pe insula i vor putea parcurge orice ruta j, (1 &#8804 j &#8804 m) pentru care D<sub>j</sub> &#8804 Dmaxi indiferent de ce alte drumuri au facut anterior.<br/>
+				<tab2>Hiccup doreste sa ajunga de pe insula 1 pe insula N pentru a-l salva pe Toothless, dragonul lui. Pentru a ajunge acolo, el va lua initial un dragon din specia 1 (de pe insula 1). Apoi, daca la un moment dat Hiccup se afla pe o insula i, (1 &#8804 i &#8804 n) avand cu el un dragon din specia t, el poate:<br/>
+				<ol>
+				<li> Sa zboare de pe insula i pe o alta insula x cu dragonul pe care il are, folosind o ruta directa j intre insulele i si x, bineinteles doar daca D<sub>j</sub>&#8804 Dmaxt.</li>
+				<li>Sa schimbe dragonul din specia t pe care il are cu un dragon din specia i aflat pe insula respectiva.</li>
+				</ol>
+				<strong> Cerinte </strong><br>
+				<ol type="a">
+					<li> Sa se determine distanta maxima Dmaxi caracteristica unui dragon la care Hiccup poate ajunge fara a schimba dragonul pe care l-a luat initial de pe insula 1.</li> 
+					<li>Sa se determine distanta minima pe care Hiccup trebuie sa o parcurga pentru a ajunge de pe insula 1 pe insula n.</li>
+				</ol>
+				<strong> Date de intrare </strong><br/>
+				<tab2>Fisierul de intrare <strong>dragoni.in</strong> contine pe prima linie un numar natural p. Pentru toate testele de intrare, numarul p poate avea doar valoarea 1 sau valoarea 2. Pe a doua linie se gasesc doua numere naturale N si M reprezentand numarul de insule, respectiv numarul de rute directe intre insule. Pe a treia linie se gasesc N numere naturale, al i-ulea dintre acestea reprezentand distanta maxima Dmaxi pe care o poate zbura un dragon de pe insula i. Pe urmatoarele M linii sunt descrise cele M rute directe. Pe fiecare dintre aceste linii se gasesc cate trei numere naturale A, B si D cu semnificatia ca exista ruta <strong>bidirectionala</strong> de lungime D intre insulele A si B.<br/>
+				<strong> Date de iesire </strong><br/>
+				<tab2>Fisierul de iesire <strong>dragoni.out</strong> va afisa un singur numar natural:
+				<div id="apDiv4">
+                <ul>
+				<li><strong> Daca valoarea lui p este 1, se rezolva numai cerinta a.</strong><br/>In acest caz numarul afisat va reprezenta distanta maxima Dmaxi a unui dragon i la care Hiccup poate ajunge fara a schimba dragonul pe care l-a luat initial de pe insula 1. </li>
+				<li><strong> Daca valoarea lui p este 2, se rezolva numai cerinta b.</strong><br/>In acest caz numarul afisat va reprezenta distanta minima pe care Hiccup trebuie sa o parcurga pentru a ajunge de pe insula 1 pe insula n.</li>
+				</ul>
+                </div>
+                <div id="apDiv2">
+				<strong><tab6>dragoni.in<tab7>dragoni.out</strong>
+    <table width="709" height="93" border="1" align="left" cellpadding="1" cellspacing="0">
+  <tr>
+    <td width="333">
+	1<br/>
+	5 6<br/>
+	6 3 13 20 26<br/>
+	1 2 5<br/>
+	1 3 7<br/>
+	1 5 10<br/>
+	2 3 6<br/>
+	3 4 5<br/>
+	3 5 14</td>
+    <td width="334" >20</td>
+  </tr>
+  <tr>
+    <td width="333">
+	2<br/>
+	5 6<br/>
+	6 3 13 20 26<br/>
+	1 2 5<br/>
+	1 3 7<br/>
+	1 5 10<br/>
+	2 3 6<br/>
+	3 4 5<br/>
+	3 5 14</td>
+    <td width="334" >28</td>
+  </tr>
+</table>
+    </div>
+	</span>
+	
+	<span style="font-family:calibri; color:white; font-size:125%">    </span>
+    </div>
+    <div id="menup">
+		<ul>
+	      <li><a href="ex2.html" target="desk">Previous</a></li>
+	    </ul>
+    </div>
+	</body>
+</html>

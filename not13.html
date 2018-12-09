@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+
+    <style type="text/css">
+    #apDiv1 {
+	position: absolute;
+	width: 739px;
+	height: 115px;
+	z-index: 1;
+	left: 67px;
+	top: 71px;
+}
+	#apDiv1 ul
+{
+		margin-top:8px;
+		list-style-image:url('whitecm2.png');
+}
+    #apDiv2 {
+	position: absolute;
+	width: 773px;
+	height: 234px;
+	z-index: 2;
+	left: 63px;
+	top: 597px;
+}
+    #apDiv3 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 3;
+	left: 98px;
+	top: 847px;
+}
+    </style>
+</head>
+	<body BackGround="f22.png">
+		<link href="base.css" rel="stylesheet" type="text/css">
+        <span style="font-size:20pt; color:white; font-weight:bold">
+        <tab5>Arbori binari. Terminologie </span>
+	<span style="color:white; font-family:calibri; font-size:125%">
+	<div id="apDiv1">
+  <tab2>O categorie importanta de grafuri neorientate sunt acelea in care muchiile reprezinta niste legaturi de tip "parinte-fiu". Un astfel de graf se numeste <strong>arbore</strong>. Ca sa intelegeti semnificatia unei legaturi de tipul "parinte-fiu", este suficient sa va ganditi la urmatorul exemplu. Sa zicem ca o persoana oarecare x are 3 copii; alti copii devenind astfel la randul sau parinte. Dar si nepotii lui x vor urma acelasi drum firesc si vor avea la randul sau alti copii, etc... Am descris astfel ceea ce numim <b>arbore genealogic</b> al unei familii.<br/>
+	  <tab2>Un graf neorientat conex si fara cicluri se numeste arbore. Un graf conex este unul care nu contine niciun nod izolat.<br/>
+	  <tab2><strong>Teorema</strong>: un arbore cu n noduri are n-1 muchii.<br/>
+	  <tab2>Detaliem si sistematizam in continuare cateva proprietati care caracterizeaza un arbore.
+	  <ul>
+	    <li>Exista un nod care nu are niciun parinte(tata), numit <strong>radacina arborelui</strong></li>
+	    <li>Cu exceptia radacinii, fiecare nod are proprietatea ca el este "fiul" unui nod din multime.</li>
+	    <li>Nodurile care nu au niciun fiu se numesc <strong>frunze</strong>.</li>
+	    <li>Nodurile sunt organizate pe nivele, primul nivel fiind ocupat de nodul radacina. Nivelul unui nod x reprezinta numarul de muchii al unui lant de la radacina pana la x adunat cu o unitate.</li>
+	    <li>Datorta faptului ca un arbore nu contine cicluri, &#8704 <sp1>u</sp1>,<sp1>v</sp1> &#8712 <sp1>V</sp1>, &#8707 un lant elementar unic <sp1>L</sp1> de la <sp1>u</sp1> la <sp1>v</sp1>.</li>
+	    </ul>
+	  </div>
+	<div id="apDiv2">
+    <tab2>De exemplu pentru arborele din figura, avem:
+    <ul>
+    <li>Nodul 1 este radacina arborelui(deci se afla nivelul 1);</li>
+    <li>Frunzele arborelui sunt nodurile: 3(nivelul 2), 5, 7(nivelul 2) si 8,9 (nivelul 4);</li>
+    <li>Succesorii(fiii) nodului 2 sunt 5 si 6; la randul sau, nodul 6 are ca predecesor(tata) nodul 2</li>
+	<li>Gradul nodului 1 este 3, in rest toate celelte noduri au gradul &#8804 3. Deci arborele se poate numi tertiar. Analogm, daca un arbore are gradele tuturor nodurilor &#8804 2, acesta se numeste <strong>binar</strong>.</li>
+    </ul>
+    </div>
+	</span>
+    <div id="apDiv3"><img src="schita133.png" width="660" height="472"></div>
+<div id="menup">
+	<ul>
+	<li><a href="not12.html" target="desk">Previous</a></li>
+	</ul>
+	</div>
+	<div id="menun">
+	<ul>
+	<li><a href="not14.html" target="desk">Next</a></li>
+	</ul>
+	</div>
+</body>
+</html>

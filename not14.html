@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<style type="text/css">
+	#apDiv1 {
+	position: absolute;
+	width: 749px;
+	height: 283px;
+	z-index: 1;
+	left: 65px;
+	top: 54px;
+}
+    #apDiv2 {
+	position: absolute;
+	width: 712px;
+	height: 139px;
+	z-index: 2;
+	left: 96px;
+	top: 388px;
+}
+    #apDiv3 {
+	position: absolute;
+	width: 809px;
+	height: 66px;
+	z-index: 3;
+	left: 39px;
+	top: 686px;
+}
+    #apDiv4 {
+	position: absolute;
+	width: 734px;
+	height: 389px;
+	z-index: 4;
+	left: 43px;
+	top: 729px;
+}
+    #apDiv5 {
+	position: absolute;
+	width: 764px;
+	height: 40px;
+	z-index: 5;
+	left: 61px;
+	top: 1019px;
+}
+    #apDiv6 {
+	position: absolute;
+	width: 762px;
+	height: 152px;
+	z-index: 6;
+	left: 62px;
+	top: 1068px;
+}
+    #apDiv7 {
+	position: absolute;
+	width: 701px;
+	height: 115px;
+	z-index: 7;
+	left: 93px;
+	top: 1143px;
+}
+    #apDiv8 {
+	position: absolute;
+	width: 697px;
+	height: 314px;
+	z-index: 8;
+	left: 95px;
+	top: 1324px;
+}
+    #apDiv9 {
+	position: absolute;
+	width: 702px;
+	height: 177px;
+	z-index: 9;
+	left: 91px;
+	top: 1677px;
+}
+		#apDiv9 ul
+{
+		margin-top:0px;
+		list-style-image:url('whitecm2.png');
+}
+    </style>
+</head>
+	<body BackGround="f22.png">
+		<link href="base.css" rel="stylesheet" type="text/css">
+		<span style="font-size:20pt; color:white; font-weight:bold">
+        <tab5>Cozi obisnuite. Cozi de prioritate </span>
+	<span style="color:white; font-family:calibri; font-size:125%">
+	<div id="apDiv1">
+    <tab2>O <strong>coada</strong> este o succesiune ordonata de elemente, in care adaugarea elementelor se face pe la un capat, numit <strong>capat de introducere</strong>(<b>p<sub>1</sub></b>), iar eliminarea elementelor se realizeaza pe la celalalt capat, numit <strong>capat de extrgere</strong>(<b>p<sub>2</sub></b>). In orice moment, putem scoate din coada numai elementul aflat la capatul de extragere. Altfel spus, elementele ies din coada in ordinea in care au fost introduse. Datorita acestei proprietati se vor numi cozi <strong>FIFO</strong> ( "First In First Out" = "Primul Intrat Primul Iesit" ).<br/>
+	<tab2>Prezentam exemplu concret de coada: pentru fiecare zbor de calatori, o companie aviatica intocmeste o lista a persoanelor care mai solicita bilete dupa epuizarea acestora. Lista este organizata sub forma unei cozi de asteptare, ce cuprinde numele si numarul actului de identitate al fiecarui solicitant. In momentul in care o persoana doreste un bilet, este introdusa in coada. Daca in urma unei reuntari apare un bilet disponibil, acesta este atribuit primei persoane care a fost introdusa in coada. Beneficiarul iese din coada, iar capatul de extragere avanseaza cu o pozitie.
+    </div>
+	<div id="apDiv2">
+    <tab2>O coada se poate implementa cu ajutorul unui tablou unidimensional. Fie <b>maxn</b> numarul maxim de elemente care pot incapea in coada.<br/>
+    <tab2>Vom numi o <i>coada vida</i>, o coada in care nu avem elemente (<b>p<sub>1</sub></b> &gt; <b>p<sub>2</sub></b>) si o <i>coada plina</i>, o coada in care nu se mai pot adauga elemente (<b>p<sub>2</sub></b> = <b>maxn</b>).<br/>
+    <tab2>Asupra unei cozi se pot efectua 2 tipuri de operatii:
+    <ul>
+    <li>adaugarea unui element ( <b>adaugare</b>(x) ): inseamna incrementarea lui <b>p<sub>2</sub></b> cu o unitate si memeorarea elementului pe noua pozitie <b>p<sub>2</sub></b>. Se poate face numai in cazul in care coada nu este plina (<b>p<sub>2</sub></b> &lt; <b>maxn</b>).</li>
+    <li>extragerea unui element ( <b>extrage</b>(x) ): inseamna cresterea lui <b>p<sub>1</sub></b> cu o unitate. Poate avea loc numai atunci cand coada nu este vida ( <b>p<sub>1</sub></b> &lt; <b>p<sub>2</sub></b> )</li>
+    </ul>
+    </div>
+	<div id="apDiv3">
+  <tab2>In figura de mai jos, in partea dreapta sunt o serie de apeluri ale celor 2 functii, iar in stanga este afisata evolutia cozii dupa apelul functiei respective.
+    </div>
+	<div id="apDiv5" align="center"><span style="font-size:20pt; color:white; font-weight:bold">Cozile de prioritate</span></div>
+	<div id="apDiv6"><tab2>Coada de prioritati este o structura de date care contine o multime <sp1>S</sp1> de elemente, fiecare avand asociata o valoare numita <strong>cheie</strong>. Asupra unei cozi de prioritati se pot efectua urmatoarele operatii.</div> 
+	<div id="apDiv7">
+    <ul>
+    <li><b>Insereaza</b>(<sp1>S</sp1>,<sp1>x</sp1>) - insereaza elementul <sp1>x</sp1> in multimea <sp1>S</sp1>. Aceasta operatie poate fi scrisa in felul urmator: <sp1>S &#8592; S</sp1> &#8746 {<sp1>u</sp1>}</li>
+    <li><b>Maxim</b>(<sp1>S</sp1>) sau <b>Minim</b>(<sp1>S</sp1>) - returneaza elementul din <sp1>S</sp1> avand cheia cea mai mare, respectiv cea mai mica.</li>
+    <li><b>Extrage-Max</b>(<sp1>S</sp1>) sau <b>Extrage-Min</b>(<sp1>S</sp1>) - elimina si returneaza elementul din <sp1>S</sp1> avand cheia cea mai mare, respectiv cea mai mica.</li>
+    </ul>
+    </div>
+	<div id="apDiv8">
+    <tab2>O aplicatie a cozilor de prioritati consta in planificarea lucrarilor pe calculatoarele dintr-o retea.
+Sarcinile care trebuie efectuate si prioritatile relative se memoreaza într-o coada de prioritate.
+Când o lucrare este terminata sau intrerupta, procedura <b>Extrage-Max</b> va selecta lucrarea
+avand prioritatea cea mai mare dintre lucrarile in asteptare. Cu ajutorul procedurii <b>Insereaza</b>,
+in coada poate fi introdusa oricand o lucrare noua.
+<br/><tab2>O coada de prioritati poate fi utilizata si in simularea unor evenimente controlate. Din coada
+fac parte evenimentele de simulat, fiecaruia atasandu-i-se o cheie reprezentand momentul cand va
+avea loc evenimentul. Evenimentele trebuie simulate in ordinea desfasurarii lor in timp, deoarece
+simularea unui eveniment poate determina necesitatea simularii altuia in viitor. In cazul acestor aplicatii este evident ca se vor folosi procedurile  Programul
+de simulare va determina urmatorul eveniment cu ajutorul procedurilor <b>Minim</b> si <b>Extrage-Min</b>, iar daca
+va trebui introdus un nou element in sir, se va apela procedura <b>Insereaza</b>.
+    </div>
+	</span>
+<div id="menup">
+	<ul>
+	<li><a href="not13.html" target="desk">Previous</a></li>
+	</ul>
+	</div>
+    <div id="apDiv4"><img src="c2.png" width="850" height="405"></div>
+</body>
+</html>

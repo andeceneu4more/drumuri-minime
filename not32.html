@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<style type="text/css">
+	#apDiv1 {
+	position: absolute;
+	width: 785px;
+	height: 115px;
+	z-index: 1;
+	left: 59px;
+	top: 111px;
+}
+    #apDiv2 {
+	position: absolute;
+	width: 455px;
+	height: 210px;
+	z-index: 2;
+	left: 114px;
+	top: 222px;
+}
+#apDiv2 ol li {
+	list-style-position: inside;
+	position: relative;
+}
+#apDiv2 ol
+{
+		margin-top:0px;
+}
+    #apDiv3 {
+	position: absolute;
+	width: 707px;
+	height: 174px;
+	z-index: 3;
+	left: 95px;
+	top: 469px;
+}
+    #apDiv4 {
+	position: absolute;
+	width: 490px;
+	height: 286px;
+	z-index: 4;
+	left: 188px;
+	top: 657px;
+}
+    #apDiv5 {
+	position: absolute;
+	width: 95px;
+	height: 43px;
+	z-index: 4;
+	left: 593px;
+	top: 656px;
+}
+    #apDiv6 {
+	position: absolute;
+	width: 690px;
+	height: 115px;
+	z-index: 5;
+	left: 102px;
+	top: 944px;
+}
+    #apDiv7 {
+	position: absolute;
+	width: 706px;
+	height: 206px;
+	z-index: 6;
+	left: 99px;
+	top: 1344px;
+}
+    #apDiv8 {
+	position: absolute;
+	width: 415px;
+	height: 364px;
+	z-index: 7;
+	left: 200px;
+	top: 1833px;
+}
+    #apDiv9 {
+	position: absolute;
+	width: 678px;
+	height: 185px;
+	z-index: 8;
+	left: 99px;
+	top: 2227px;
+}
+    #apDiv10 {
+	position: absolute;
+	width: 688px;
+	height: 115px;
+	z-index: 9;
+	left: 99px;
+	top: 2634px;
+}
+    #apDiv11 {
+	position: absolute;
+	width: 169px;
+	height: 220px;
+	z-index: 10;
+	left: 556px;
+	top: 219px;
+}
+    </style>
+</head>
+	<body BackGround="f22.png">
+	<link href="base.css" rel="stylesheet" type="text/css">
+		<span style="font-family: calibri; color: white; font-size=130%;font-size: 125%;">
+<br/>
+	<ul>
+	  <ul type="square">
+	    <span style="font-weight:bolder;font-size:150%;color:white;"> <li>Algoritmul Dijkstra</li> </span><br/>
+      </ul>
+	</ul>
+	<div id="apDiv1">
+	<tab2>Algoritmul Dijkstra rezolva problema drumurilor minime de sursa unica intr-un graf orientat <sp1> G </sp1> =(<sp1>V</sp1>, <sp1>E</sp1>) cu costuri pozitive. In cadrul acestei sectiuni vom presupune ca <sp1>&#969</sp1>(<sp1>u</sp1>,<sp1>v</sp1>) &#8805 0 pentru fiecare arc (<sp1>u</sp1>,<sp1>v</sp1>) &#8712 <sp1>E</sp1>. Algoritmul a fost conceput de matematicianul Edsger W. Dijkstra in 1956, intr-o varianta care nu folosea coada de prioritati.
+	</div>
+    <div id="apDiv2">
+	<b>Dijkstra</b>(<sp1>G</sp1>,<sp1>&#969</sp1>,<sp1>s</sp1>)
+	<ol>
+	<li>Initializeaza-Sursa-Unica(<sp1>G, s</sp1>)</li>
+	<li><sp1>S &#8592;</sp1> &#8709;</li>
+	<li><sp1>Q &#8592; V</sp1></li>
+	<li><strong>cat timp</strong> <sp1>Q</sp1> &#8800; &#8709; <strong>executa</strong></li>
+	<li><tabal><sp1>u &#8592; </sp1>Extrage-Min(<sp1>Q</sp1>)</li>
+	<li><tabal><sp1>S &#8592; S</sp1> &#8746 {<sp1>u</sp1>}</li>
+	<li><tabal><strong>pentru</strong> fiecare varf <sp1>v</sp1> &#8712 <sp1>&#915 </sp1><sup>+</sup>(<sp1>u</sp1>) <strong>executa</strong></li>
+	<li><tabal><tabal>Relaxeaza(<sp1>u, v, &#969</sp1>)</li>
+	</ol>
+	</div>
+	<div id="apDiv3">
+    Algoritmul opereaza prin mentinerea unei multimi <sp1>S</sp1> de varfuri pentru care costurile finale corepunzatoare drumurilor minime de la sursa s au fost deja determinate respectiv pentru toate varfurile <sp1>v</sp1> &#8712 <sp1>S</sp1> avem d[<sp1>v</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>v</sp1>). Algoritmul itereaza selectarea unui varf <sp1>v</sp1> &#8712 <sp1>V - S</sp1> pentru care estimarea drumului minim este minima, introduce <sp1>u</sp1> in <sp1>S</sp1> si relaxeaza arcele adiacente lui <sp1>u</sp1>. In implementarea care va fi prezentata se va mentine o <strong>coada de prioritati</strong> <sp1>Q</sp1> ce contine toate varfurile din <sp1>V - S</sp1> indexate prin valorile din d corespunzatoare.
+    </div>
+    <div id="apDiv6">
+    <tab2>Evolutia algoritmului este prezentata in film, unde tabloul unidimensional reprezinta d, iar nodurile marcate cu X sunt cele care se afla in multimea <sp1>S</sp1>. Linia 1 realizeaza initializarea obisnuita a valorilor din d si &#960, iar linia 2 intializeaza multimea <sp1>S</sp1> cu multimea vida. In continuare, coada de prioritati <sp1>Q</sp1> este initializata cu <sp1>V - S</sp1> = <sp1>V</sp1> - &#8709; = <sp1>V</sp1>. La fiecare iteratie a instructiunii <strong>cat timp</strong> din liniile 4-8, este extras cate un varf <sp1>u</sp1> din <sp1>Q</sp1> = <sp1>V - S</sp1> si introdus in <sp1>S</sp1> (la prima iteratie <sp1>u</sp1> = <sp1>s</sp1>). In continuare, liniile 7-8 relaxeaza arcele (<sp1>u</sp1>,<sp1>v</sp1>) care iese din <sp1>u</sp1> si reactualizeaza d[<sp1>v</sp1>] si predecesoul &#960[<sp1>u</sp1>] in cazul i care drmul minim catre <sp1>v</sp1> poate fi ameliorat prin trecerea prin <sp1>u</sp1>. Trebuie observat ca niciun vard nu mai este introdus in <sp1>Q</sp1> dupa liniile 3 si ca fiecare varf este extras din <sp1>Q</sp1> si inserat in <sp1>S</sp1> o singura data deci instructiunea <strong>cat timp</strong> din liniile 4-8 efectueaza n iteratii, unde n = cardinalul mutlimii <sp1>V</sp1>.
+	<br/><tab2>Deoarece algoritmul Dijkstra alege intotdeauna "cel mai usor" sau "cel mai apropiat" varf din <sp1>V - S</sp1> penru a-l introduce in <sp1>S</sp1>, spunem ca el utilizeaza o strategie de tip greedy. In general strategiile greedy nu asigura obtinerea solutiei optime, dar vom demonstra corectitudinea sa in teorema urmatoare. 
+    </div>
+	<div id="apDiv7">
+    <strong>Teorema 5 (Corectitudinea algoritmului Dijkstra)</strong><br/>
+	Daca algoritmul Dijkstra este aplicat unui graf <sp1> G </sp1>= ( <sp1>V</sp1>, <sp1>E</sp1> ) cu functia de cost <sp1>  &#969  :  E  &#8594 </sp1> &#8477<sub>+</sub> si un nod sursa <sp1>s</sp1> &#8712 <sp1>V</sp1>, atunci la terminarea algoritmului d[<sp1>u</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>u</sp1>), pentru toate varfurile <sp1>u</sp1> &#8712 <sp1>V</sp1>.
+	<br/><strong>Demonstratie</strong><br/>
+	Vom demonstra prin reducere la absurd ca pentru fiecare varf <sp1>u</sp1> &#8712 <sp1>V</sp1>, in momentul la care <sp1>u</sp1> este introdus in multimea <sp1>S</sp1>, d[<sp1>u</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>u</sp1>) si egalitatea se mentine la toate momentele ulterioare de tmp.<br/>
+	<tab2>Presupunem ca <sp1>u</sp1> este primul varf pentru care d[<sp1>u</sp1>] &#8800 <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>u</sp1>) in momentul la care el este introdus in multimea <sp1>S</sp1>. Sa examinam configuratia existenta la inceputul iteratiei din instructiunea <strong>cat timp</strong> care determina introducerea varfului <sp1>u</sp1> in <sp1>S</sp1> si prin examinarea unui dum minim de la <sp1>s</sp1> la <sp1>u</sp1> sa obtinem concluzia d[<sp1>u</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>u</sp1>). Deorece <sp1>s</sp1> este primul varf careeste introdus in <sp1>S</sp1> si d[<sp1>s</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>s</sp1>) = 0; in acest moment, <sp1>u</sp1> &#8800 <sp1>s</sp1>; <sp1>s</sp1>atunci rezulta ca <sp1>S</sp1> &#8800 &#8709; in momentul in care  <sp1>u</sp1> este introdus in <sp1>S</sp1>. In mod necesar, exista un drum de la <sp1>s</sp1> la <sp1>u</sp1>, deoarece in caz contrar am avea d[<sp1>u</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>u</sp1>) = &#8734 ceea ce ar contrazice ipoteza d[<sp1>u</sp1>] &#8800 <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>u</sp1>).<br/>
+	<tab2> Din moment ce exista un drum de la <sp1>s</sp1> la <sp1>u</sp1> exista si un drum minim <sp1>p</sp1> de la <sp1>s</sp1> la <sp1>u</sp1>. Drumul <sp1>p</sp1> conecteaza un varf <sp1>s</sp1> din <sp1>S</sp1> cu un varf <sp1>u</sp1> din <sp1>V - S</sp1>. Fie <sp1>y</sp1> primul varf de-a lungul lui <sp1>p</sp1> astfel incat <sp1>y</sp1> &#8712 <sp1>V - S</sp1> si fie <sp1>x</sp1> &#8712 <sp1>V</sp1>, predecesorul lui <sp1>y</sp1>.
+    </div>
+	<div id="apDiv9">
+	<tab2>Asa cum rezulta din figura, drumul p poate fi descompus in <sp1>s</sp1> &#8605 <sp1>x</sp1> <sp1>&#8594</sp1> <sp1>y</sp1> &#8605 <sp1>u</sp1>. Afirmam ca d[<sp1>y</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>y</sp1>) in momentul in care <sp1>u</sp1> este introdus in <sp1>S</sp1>: pentru a demonstra aceasta afirmatie, obseram ca <sp1>x</sp1> &#8712 <sp1>S</sp1>. Deoarece <sp1>u</sp1> este primul varf pentru care d[<sp1>u</sp1>] &#8800  <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>u</sp1>) in momentul in care este introdus in <sp1>S</sp1>, rezulta ca d[<sp1>x</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>x</sp1>) in momentul in care <sp1>x</sp1> este introdus in <sp1>S</sp1>; atunci pe baza <strong>Teoremei 4</strong> rezulta ca d[<sp1>y</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>y</sp1>).<br/>
+	<tab2>In acest moment putem ajunge la o contradictie. Deoarece <sp1>y</sp1> il precede pe <sp1>u</sp1> pe un drum minim de la <sp1>s</sp1> la <sp1>u</sp1>, avem <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>y</sp1>) &#8804 <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>u</sp1>) si deci prin <strong>Teorema 3</strong>:
+	<p align="center">d[<sp1>y</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>y</sp1>) &#8804 <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>u</sp1>) &#8804 d[<sp1>u</sp1>]</p>
+	<tab2>Dar, pentru ca ambele varfuri <sp1>u</sp1> si <sp1>y</sp1> se afla deja in <sp1>V-S</sp1> in momentul in care <sp1>u</sp1> a fost selectat in lina 5, avem d[<sp1>y</sp1>] &#8805 d[<sp1>u</sp1>] atunci inegalitatile de mai sus devin egalitati:
+	<p align="center">d[<sp1>y</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>y</sp1>) = <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>u</sp1>) = d[<sp1>u</sp1>]</p>
+    </div>
+	<div id="apDiv10">
+	<tab2>In consecinta  d[<sp1>u</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>u</sp1>) ceea ce contrazice ipoteza si in concluzie: in momentul in care fiecare varf <sp1>u</sp1> &#8712 <sp1>V</sp1> este inserat in multimea <sp1>S</sp1>, avem  d[<sp1>u</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>, <sp1>u</sp1>) si conform <strong>Teoremei 3</strong> egalitatea se mentine in toate momentele ulterioare de timp.<br/><br/>
+	<tab2><strong>Complexitatea Algoritmului</strong>: instructiunea <strong>cat timp</strong> efectueaza n pasi; din moment ce <sp1>Q</sp1> este o coada de prioritati <b>Extrage-Min</b>(<sp1>Q</sp1>) are o complexitate de <sp1>O</sp1>(log<sub>2</sub>n) complexitatea finala este - <sp1>O</sp1>(nlog<sub>2</sub>n)
+	
+	</div>
+	</span>
+	<div id="menup">
+	<ul>
+	<li><a href="not31.html" target="desk">Previous</a></li>
+	</ul>
+	</div>
+	<div id="menun">
+	<ul>
+	<li><a href="not33.html" target="desk">Next</a></li>
+	</ul>
+	</div>
+    <div id="apDiv4" id="myvideo">
+    <video width="480" height="272" controls>
+    <source src="algsm.mp4" type="video/mp4"/>
+    <source src="algsm.ogv" type="video/ogv"/>
+    </video>
+    </div>
+    <div id="apDiv5">
+    <a href="videow.html" target="_blank">
+    <input type="button" value="Fullscreen">
+    </a>
+    </div>
+    <div id="apDiv8"><img src="schita4.png" width="436" height="361">
+    </div>
+    <div id="apDiv11"><img src="Edsger_Wybe_Dijkstra.jpg" width="176" height="235">
+    </div>
+</body>
+</html>

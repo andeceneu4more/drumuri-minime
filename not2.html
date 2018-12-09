@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<style type="text/css">
+    #apDiv3 {
+	position: absolute;
+	width: 200px;
+	height: 134px;
+	z-index: 3;
+	left: 227px;
+	top: 378px;
+}
+    #apDiv4 {
+	position: absolute;
+	width: 540px;
+	height: 240px;
+	z-index: 4;
+	left: 162px;
+	top: 677px;
+}
+    #apDiv4 table tr td {
+	text-align: center;
+	color: #FFF;
+	font-weight: bolder;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+    #apDiv6 {
+	position: absolute;
+	width: 732px;
+	height: 79px;
+	z-index: 6;
+	left: 98px;
+	top: 78px;
+}
+    #apDiv7 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 7;
+	left: 112px;
+	top: 166px;
+}
+    #apDiv8 {
+	position: absolute;
+	width: 697px;
+	height: 87px;
+	z-index: 8;
+	left: 114px;
+	top: 288px;
+}
+    #apDiv1 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 9;
+}
+    #apDiv2 {
+	position: absolute;
+	width: 691px;
+	height: 83px;
+	z-index: 9;
+	left: 109px;
+	top: 942px;
+}
+    #apDiv5 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 10;
+	left: 223px;
+	top: 1037px;
+}
+    #apDiv9 {
+	position: absolute;
+	width: 542px;
+	height: 250px;
+	z-index: 11;
+	left: 145px;
+	top: 1353px;
+}
+#apDiv9 table tr td {
+	text-align: center;
+	color: #FFF;
+	font-weight: bolder;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+    </style>
+</head>
+	<body BackGround="f22.png">
+    <span style="color:white; font-family:calibri; font-size:125%">
+		<link href="base.css" rel="stylesheet" type="text/css">
+		<ptit2> 
+		  <div id="apDiv3"><img src="schita21.png" width="415" height="298"></div>
+        Metode de reprezentare </ptit2><br/>
+		      
+		<div id="apDiv6">
+		 <tab2><strong>Matricea de adiacenta</strong> este cea mai simpla forma de reprezentare. Pentru un graf care are n noduri, matricea de adiacenta este un tablou bidimensional cu n linii si n coloane unde pentru orice i si j ( 1 &#8804 i, j &#8804 n ):
+		</div>
+		<div id="apDiv7"><img src="adiac.png" width="695" height="102">
+        </div>
+	<div id="apDiv8">
+        - unde <sp1>&#969</sp1>(i, j) reprezinta costul arcului (i, j). Datorita orientarii, asa cum am mai spus, arcul (i, j) nu este acelasi lucru cu (j, i). Prin urmare A[i][j] &#8800 A[j][i], iar matricea este asimetrica fata de diagonala principala.
+        </div>
+        <div id="apDiv2">
+          <tab2>In cazul unui graf care nu este ponderat, matricea de adiacenta este definita mult mai simplu: A[i][j] este 1 daca exista arcul (i,j) sau 0, altfel. Spre exemplu pentru graful de mai jos:
+        </div>
+	<div id="apDiv4" align="center">
+	  <table width="523" height="234" border="1" align="center" cellpadding="1" cellspacing="1">
+	    <tr>
+	      <td width="501">&nbsp;</td>
+	      <td width="501">1</td>
+	      <td width="501">2</td>
+	      <td width="501">3</td>
+	      <td width="501">4</td>
+	      <td width="501">5</td>
+        </tr>
+	    <tr>
+	      <td>1</td>
+	      <td>&#8734</td>
+	      <td>8</td>
+	      <td>11</td>
+	      <td>15</td>
+	      <td>4</td>
+        </tr>
+	    <tr>
+		  <td>2</td>
+		  <td>&#8734</td>
+	      <td>&#8734</td>
+	      <td>3</td>
+	      <td>9</td>
+          <td>1</td>
+        </tr>
+	    <tr>
+		  <td>3</td>
+		  <td>&#8734</td>
+          <td>&#8734</td>
+          <td>&#8734</td>
+	      <td>2</td>
+          <td>&#8734</td>
+        </tr>
+	    <tr>
+		  <td>4</td>
+		  <td>&#8734</td>
+          <td>&#8734</td>
+          <td>&#8734</td>
+          <td>&#8734</td>
+	      <td>6</td>
+        </tr>
+	    <tr>
+		  <td>5</td>
+		  <td>&#8734</td>
+          <td>&#8734</td>
+	      <td>2</td>
+          <td>&#8734</td>
+          <td>&#8734</td>
+        </tr>
+      </table>
+	</div>
+    <div id="apDiv9">
+    <table width="523" height="234" border="1" align="center" cellpadding="1" cellspacing="1">
+	    <tr>
+	      <td width="501">&nbsp;</td>
+	      <td width="501">1</td>
+	      <td width="501">2</td>
+	      <td width="501">3</td>
+	      <td width="501">4</td>
+	      <td width="501">5</td>
+        </tr>
+	    <tr>
+	      <td>1</td>
+	      <td>0</td>
+	      <td>1</td>
+	      <td>0</td>
+	      <td>1</td>
+	      <td>1</td>
+        </tr>
+	    <tr>
+		  <td>2</td>
+		  <td>1</td>
+	      <td>0</td>
+	      <td>1</td>
+	      <td>1</td>
+          <td>0</td>
+        </tr>
+	    <tr>
+		  <td>3</td>
+		  <td>0</td>
+          <td>1</td>
+          <td>0</td>
+	      <td>0</td>
+          <td>1</td>
+        </tr>
+	    <tr>
+		  <td>4</td>
+		  <td>1</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+	      <td>1</td>
+        </tr>
+	    <tr>
+		  <td>5</td>
+		  <td>1</td>
+          <td>0</td>
+	      <td>1</td>
+          <td>1</td>
+          <td>0</td>
+        </tr>
+      </table>
+    </div>
+<div id="apDiv5"><img src="schhita11.png" width="400" height="280"></div>
+</span>
+<div id="menun">
+  <ul>
+	<li><a href="not21.html" target="desk">Next</a></li>
+	</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<style type="text/css">
+	#apDiv1 {
+	position: absolute;
+	width: 732px;
+	height: 115px;
+	z-index: 1;
+	left: 99px;
+	top: 685px;
+	font-size:20px;
+}
+	#apDiv1 ul
+{
+		margin-top:0px;
+		list-style-image:url('whitecm2.png');
+}
+    #apDiv2 {
+	position: absolute;
+	width: 702px;
+	height: 251px;
+	z-index: 2;
+	left: 102px;
+	top: 934px;
+}
+    #apDiv3 {
+	position: absolute;
+	width: 485px;
+	height: 339px;
+	z-index: 3;
+	left: 187px;
+	top: 1185px;
+}
+    #apDiv4 {
+	position: absolute;
+	width: 704px;
+	height: 123px;
+	z-index: 4;
+	top: 1526px;
+	left: 99px;
+}
+    </style>
+	</head>
+	<body BackGround="f22.png"> 
+	<link href="base.css" rel="stylesheet" type="text/css">
+	<span style="font-family:calibri; color:white; font-size:125%;">
+	<p><tab1>Intr-o <strong><i>problema de drum minim</i></strong> este dar un graf orientat <sp1> G </sp1>= ( <sp1>V</sp1>, <sp1>E</sp1> )  si functia de cost<br/><tab2><sp1>  &#969  :  E  &#8594 </sp1> &#8477 .</p>
+	<ptit> Grafuri </ptit>
+	<p><tab1> Un graf orientat <sp1>G</sp1> este o pereche de multimi ( <sp1>V</sp1>, <sp1>E</sp1> ) , unde <sp1>V</sp1> este o multime nevida si<br/><tab2>finita de elemente numite <strong>varfuri</strong>, iar <sp1>E</sp1> este o multime de perechi ordonate formate din elemente<br/><tab2>distincte din multimea <sp1>V</sp1>, numite <strong>arce</strong>.</p>
+	<p><tab5><img src="schita2.png" height="47%" width="47%"><br/><tab1> De exemplu, pentru graful din prima figura:
+		<br/><tab4> 
+		<sp1>V</sp1> = {1, 2, 3, 4, 5}
+		
+		<br/><tab4> 
+		<sp1>E</sp1> = { (5,3), (1,2), (1,3), (1,4), (1,5), (2,3), (2,4), (2,5), (3,4), (4,5) }
+		
+		</p>
+	<div id="apDiv1">
+    Observatii:
+    <ul>
+	<li>Fiecare arc este de forma <sp1>x</sp1> = (<sp1>u</sp1>,<sp1>v</sp1>), unde <sp1>u</sp1> se numeste <strong>extremitatea initiala</strong>, iar <sp1>v</sp1> <strong>extremitatea finala</strong> a arcului. Cu ale cuvinte:"arcul iese din nodul <sp1>u</sp1> si intra in nodul <sp1>v</sp1>". Se mai spune ca nodurile <sp1>u</sp1> si <sp1>v</sp1> sunt <strong>adiacente</strong>, iar arcul <sp1>x</sp1> si varful <sp1>u</sp1> sunt <strong>incidente</strong>; varful <sp1>v</sp1> se numeste succesor al lui <sp1>u</sp1>, iar varful <sp1>u</sp1> predecesor al nodului <sp1>v</sp1>.</li>
+	<li>Arcul (<sp1>u</sp1>,<sp1>v</sp1>) este diferit de (<sp1>v</sp1>,<sp1>u</sp1>) </li>
+    <li>Prin notiunea de <strong>perechi ordonate</strong> nu trebuie sa intelegem ca un arc este mai mare decat altul, ci pur si simplu ca facem deosebire intre un arc de forma (<sp1>u</sp1>,<sp1>v</sp1>) si un altul de forma (<sp1>v</sp1>,<sp1>u</sp1>).</li>
+    </ul>
+    </div>
+	<div id="apDiv2">
+	<tab2>Un graf neorientat <sp1>G</sp1> este o pereche de multimi ( <sp1>V</sp1>, <sp1>E</sp1> ) , unde <sp1>V</sp1> este o multime nevida sifinita de elemente numite <strong>noduri</strong>, iar <sp1>E</sp1> este o multime de perechi neordonate formate din elemente distincte din multimea <sp1>V</sp1>, numite <strong>muchii</strong>. Spre deosebire de graful orientat, la nivelul celui neorientat muchia (<sp1>v</sp1>,<sp1>u</sp1>) coincide cu (<sp1>u</sp1>,<sp1>v</sp1>). Prin urmare, o muchie are 2 extremitati (niciuna dintre ele nu se numeste finala sau initiala).
+	<p> De exemplu, pentru graful din a doua figura:
+		<br/><tab4> 
+		<sp1>V</sp1> = {1, 2, 3, 4, 5}
+		
+		<br/><tab4> 
+		<sp1>E</sp1> = { (5,3), (1,2), (1,4), (1,5), (2,3), (2,4), (4,5) }
+		
+		</p>
+    </div>
+	<div id="apDiv4">
+    <tab2>Fie graful <sp1>G</sp1> = ( <sp1>V</sp1>, <sp1>E</sp1> ). Un subgraf <sp1>G<sub>1</sub></sp1> = ( <sp1>U</sp1>, <sp1>F</sp1> ), unde
+	<sp1>U</sp1> &#8834; <sp1>V</sp1> si <sp1>F</sp1> &#8834; <sp1>E</sp1> este un graf obtinut din <sp1>G</sp1> prin eliminarea unor varfuri/noduri 
+	si a tuturor muchiilor/arcelor incidente lor.<br/>
+	<tab2>Un graf partial <sp1>G<sub>2</sub></sp1> = ( <sp1>V</sp1>, <sp1>F</sp1> ), unde
+	<sp1>F</sp1> &#8834; <sp1>E</sp1> este un graf obtinut din <sp1>G</sp1> prin eliminarea doar a unor muchii/arce.
+    </div>
+	</span>
+	<div id="menun">
+	<ul>
+	      <li><a href="not11.html" target="desk">Next</a></li>
+	    </ul>
+    </div>
+    <div id="apDiv3"><img src="schhita11.png" width="470" height="329"></div>
+</body>
+	</html>

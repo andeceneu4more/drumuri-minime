@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<style type="text/css">
+	#apDiv1 {
+	position: absolute;
+	width: 761px;
+	height: 126px;
+	z-index: 1;
+	left: 65px;
+	top: 93px;
+}
+    #apDiv2 {
+	position: absolute;
+	width: 765px;
+	height: 115px;
+	z-index: 2;
+	left: 65px;
+	top: 195px;
+}
+    #tcode {
+	position: absolute;
+	width: 445px;
+	height: 115px;
+	z-index: 3;
+	left: 224px;
+	top: 636px;
+}
+    #tcode ol li {
+	list-style-position: inside;
+	position: relative;
+}
+	#apDiv5 ol li {
+	list-style-position: inside;
+	position: relative;
+}
+    #apDiv3 {
+	position: absolute;
+	width: 721px;
+	height: 115px;
+	z-index: 4;
+	left: 68px;
+	top: 504px;
+}
+    #apDiv4 {
+	position: absolute;
+	width: 721px;
+	height: 115px;
+	z-index: 5;
+	left: 68px;
+	top: 783px;
+}
+    #apDiv5 {
+	position: absolute;
+	width: 444px;
+	height: 115px;
+	z-index: 6;
+	left: 152px;
+	top: 122px;
+}
+    </style>
+	</head>
+	<body BackGround="f22.png">
+	<link href="base.css" rel="stylesheet" type="text/css">
+		<span style="font-family: calibri; color: white; font-size=130%;font-size: 125%;">
+		<div id="apDiv1">
+        <tab2>
+		Tehnica principala utilizata de algoritmii care urmeaza a fi descrisi este <strong>relaxarea</strong>,o metoda care revine la decrenentarea repetata a unei margini superioarea pentru determi-narea costului corespunzator unui drum minim  pentru fiecare varf, pana cand marginea superioara devine egala cu costul unui drum optim.<br/><tab2>La baza acestei tehnici stau 2 teoreme importante:
+        </div>
+		<div id="apDiv2">
+			<ol>
+				<li><strong> Teorema 1 (Subdrumurile unui drum minim sunt drumuri optime)</strong><br/>
+				Fiind dat in graf orientat cu costuri, <sp1> G </sp1> =(<sp1>V</sp1>, <sp1>E</sp1>) functia de cost fiind <sp1>  &#969  :  E  &#8594</sp1> &#8477 
+				. <br/>Fie  <sp1>p = &lt; v<sub>1</sub> , v<sub>2</sub> , ... , v<sub>k</sub> &gt;</sp1> un drum minim de la varful <sp1>v<sub>1</sub></sp1> la varful <sp1>v<sub>k</sub></sp1> si pentru &#8704; i si j astfel incat 1 &#8804 i &#8804 j &#8804 k fie  <sp1>p<sub>ij</sub> = &lt; v<sub>i</sub> , v<sub>i+1</sub> , ... , v<sub>j</sub> &gt;</sp1> subdrumul de la nodul <sp1>v<sub>i</sub></sp1> la varful <sp1>v<sub>j</sub></sp1>. Atunci <sp1>p<sub>ij</sub></sp1> este un drum minim de la <sp1>v<sub>i</sub></sp1> la <sp1>v<sub>j</sub></sp1>.
+				</li>
+				<li>
+				<strong>Teorema 2</strong>
+				<br/>Fie <sp1> G </sp1> =(<sp1>V</sp1>, <sp1>E</sp1>) un graf orientat cu costuri, functia de cost fiind <sp1> &#969  :  E  &#8594</sp1> &#8477  si avand varful sursa <sp1>s</sp1>. Atunci pentru toate arcele (<sp1>u</sp1>,<sp1>v</sp1>) &#8712; <sp1>E</sp1> avem <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>v</sp1>) &#8804 <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>u</sp1>) + <sp1>&#969</sp1>(<sp1>u</sp1>,<sp1>v</sp1>).
+				
+				</li>
+		  </ol>
+        </div>
+        <div id="apDiv3">
+        <tab2>Efectiv, tehnica <strong>relaxarii
+</strong> se realizeaza prin intermediul a 2 sub pograme ce sunt prezentate mai jos. Pentru fiecare varf  <sp1>v</sp1> &#8712; <sp1>V</sp1> se pastreaza un tablou unidimensional <sp1>d</sp1>[<sp1>v</sp1>] care reprezinta o margine superioara a drumului minim de la <sp1>s</sp1>  la <sp1>v</sp1>; practic este o <strong>estimare a drumului minim</strong>. Toate aceste elemente sunt intializate prin urmatoarea procedura:    </div>
+        
+
+	<ptit>Algoritmi </ptit>
+	<br/>
+	<ul>
+	  <ul type="square">
+	    <span style="font-weight:bolder;font-size:150%;color:white;"> <li>Relaxarea drumurilor</li> </span><br/>
+      </ul>
+	</ul>
+    <div id="tcode">
+    <b>Initializeaza-Sursa-Unica</b>(<sp1>G, s</sp1>)
+      <ol type="1">
+      	<li><strong>pentru</strong> fiecare varf <sp1>v</sp1> &#8712; <sp1>V</sp1> <strong>executa</strong></li>
+      	<li><tab2>d[<sp1>v</sp1>] <sp1>&#8592;</sp1> &#8734;</li>
+        <li><tab2>&#960;[<sp1>v</sp1>] <sp1>&#8592;</sp1> 0</li>
+        <li>d[<sp1>s</sp1>] <sp1>&#8592;</sp1> 0</li>
+      </ol>
+    </div>
+    <div id="apDiv4">
+    <tab2>In procesul de <strong>relaxare</strong> a unui arc (<sp1>u</sp1>,<sp1>v</sp1>) se verifica daca drumul minim la <sp1>v</sp1>, determinat pana in acel moment, poate fi imbunatatit pe baza varfului <sp1>u</sp1>; daca este posibil se reactualizeaza d[<sp1>v</sp1>] si &#960;[<sp1>v</sp1>]. Pseudocodul urmator urmator realizeaza un pas de relaxare pe arcul (<sp1>u</sp1>,<sp1>v</sp1>).
+    <div id="apDiv5">
+		<b>Relaxeaza</b>(<sp1>u, v, &#969</sp1>)
+		<ol>
+			<li><strong>daca</strong> d[<sp1>v</sp1>] &#8804 d[<sp1>u</sp1>] + <sp1>&#969</sp1>(<sp1>u</sp1>,<sp1>v</sp1>) <strong>atunci</strong></li>
+			<li><tab2>d[<sp1>v</sp1>] <sp1>&#8592;</sp1> d[<sp1>u</sp1>] + <sp1>&#969</sp1>(<sp1>u</sp1>,<sp1>v</sp1>)</li>
+			<li><tab2>&#960;[<sp1>v</sp1>] <sp1>&#8592;</sp1> <sp1>u</sp1></li>
+		</ol>
+	</div>
+    </div>
+	</span>
+	<div id="menun">
+	<ul>
+	<li><a href="not31.html" target="desk">Next</a></li>
+	</ul>
+	</div>
+	</body>
+</html>

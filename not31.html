@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<style type="text/css">
+    #apDiv6 {
+	position: absolute;
+	width: 766px;
+	height: 115px;
+	z-index: 1;
+	left: 54px;
+	top: 98px;
+}
+    #apDiv1 {
+	position: absolute;
+	width: 796px;
+	height: 115px;
+	z-index: 2;
+	left: 69px;
+	top: 132px;
+}
+    #apDiv2 {
+	position: absolute;
+	width: 734px;
+	height: 115px;
+	z-index: 3;
+	left: 89px;
+	top: 317px;
+}
+    #apDiv3 {
+	position: absolute;
+	width: 829px;
+	height: 98px;
+	z-index: 4;
+	left: 34px;
+	top: 644px;
+}
+    </style>
+	</head>
+	<body BackGround="f22.png">
+	<link href="base.css" rel="stylesheet" type="text/css">
+		<span style="font-family: calibri; color: white; font-size=130%;font-size: 125%;">
+<br/>
+	<ul>
+	  <ul type="square">
+	    <span style="font-weight:bolder;font-size:150%;color:white;"> <li>Proprietati ale relaxarii</li> </span><br/>
+      </ul>
+	</ul>
+	<div id="apDiv6">
+    <tab2>Corectitudinea algoritmilor din acest soft, depinde de o serie de proprietati ale relaxarii care sunt prezentate in cadrul urmatoarelor teoreme:
+    </div>
+	<div id="apDiv1">
+<ol>
+  <li><strong>Teorema 3</strong><br/>Fie <sp1> G </sp1> =(<sp1>V</sp1>, <sp1>E</sp1>) un graf orientat cu functia de cost  <sp1>  &#969  :  E  &#8594 </sp1> &#8477. Fie <sp1>s</sp1> &#8712 <sp1>V</sp1> un varf sursa si presupunem ca graful este initializat prin <b>Initializeaza-Sursa-Unica</b>(<sp1>G, s</sp1>). Atunci d[<sp1>v</sp1>] &#8805 <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>v</sp1>) pentru orice <sp1>v</sp1> &#8712 <sp1>V</sp1> si relatia se pastreaza pentru orice secventa de pasi de relaxare efectuati asupra arcelor lui <sp1>G</sp1>. Mai mult decat atat, o data ce d[<sp1>v</sp1>]=<sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>v</sp1>), valoarea lui nu se mai modifica. <br/>
+    </li>
+	</ol>
+    </div>
+      <div id="apDiv2">
+  <strong>Demonstratie</strong><br/><tab2>
+        Relatia d[<sp1>s</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>s</sp1>) = 0 este cu certitudine indeplinita inca din momentul initializarii; vom demonstra prin reducere la absurd ca relatia,pentru orice <sp1>v</sp1> &#8712 <sp1>V</sp1> - {<sp1>s</sp1>}, se mentine pentru orice secventa de pasi de relaxare. Fie <sp1>v</sp1> primul varf pentru care un pas de relaxare al arcului (<sp1>u</sp1>,<sp1>v</sp1>) determina d[<sp1>v</sp1>] &lt <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>v</sp1>). Atunci din <strong>Teorema 2</strong> obtinem d[<sp1>u</sp1>]+<sp1>&#969</sp1>(<sp1>u</sp1>,<sp1>v</sp1>)=d[<sp1>v</sp1>] &lt <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>v</sp1>) &#8804 <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>u</sp1>) + <sp1>&#969</sp1>(<sp1>u</sp1>,<sp1>v</sp1>) ceea ce implica d[<sp1>u</sp1>] &lt <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>u</sp1>). Dar relaxarea arcului (<sp1>u</sp1>,<sp1>v</sp1>) nu determina modificarea lui d[<sp1>u</sp1>], ceea ce contrazice alegerea lui <sp1>v</sp1> ca fiind primul varf pentru care determina d[<sp1>v</sp1>] &lt <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>v</sp1>). Deci relatia d[<sp1>v</sp1>] &#8805 <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>v</sp1>) este adevarata pentru orice <sp1>v</sp1> &#8712 <sp1>V</sp1>.<br/><tab2>Din moment ce am demonstrat ca d[<sp1>v</sp1>] &#8805 <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>v</sp1>), o data ce d[<sp1>v</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>v</sp1>), d[<sp1>v</sp1>] nu mai poate decreste; dar nici creste, deoarece pasii de relaxare determina doar decrementarea valorilor lui d.
+    </div>
+	<div id="apDiv3">
+    <ol start=2>
+    <li><strong>Teorema 4</strong><br/>
+    Fie <sp1> G </sp1> =(<sp1>V</sp1>, <sp1>E</sp1>) un graf orientat cu functia de cost  <sp1>  &#969  :  E  &#8594 </sp1> &#8477. Fie <sp1>s</sp1> &#8712 <sp1>V</sp1> un varful sursa si un drum minim <sp1>s</sp1> &#8605;<sp1>u</sp1> <sp1>&#8594 </sp1> <sp1>v</sp1>. Presupunem ca graful este initializat prin <b>Initializeaza-Sursa-Unica</b>(<sp1>G, s</sp1>), dupa care este efectuata o secventa de pasi de relaxare care include apelul lui <b>Relaxeaza</b>(<sp1>u, v, &#969</sp1>) asupra arcelor lui <sp1>G</sp1>. Daca d[<sp1>u</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>u</sp1>) la un moment dat care precede apelul functiei, atunci d[<sp1>v</sp1>] = <sp1>&#948;</sp1>(<sp1>s</sp1>,<sp1>v</sp1>), in orice moment ulterior acestui apel.
+    </li>
+    </ol>
+    </div>
+    </span>
+	<div id="menup">
+	<ul>
+	<li><a href="not3.html" target="desk">Previous</a></li>
+	</ul>
+	</div>
+	<div id="menun">
+	<ul>
+	<li><a href="not32.html" target="desk">Next</a></li>
+	</ul>
+	</div>
+	</body>
+</html>
